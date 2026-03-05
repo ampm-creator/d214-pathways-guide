@@ -1,12 +1,1665 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex" />
-  <title>Content Manager - District 214</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>District 214 - Academic Programs & Pathways Guidebook 2026-2027</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        d214red: '#ba0c2f',
+        d214dark: '#1a1a2e',
+        red50: '#fef2f4',
+        red100: '#fde6ea',
+      },
+      boxShadow: {
+        'soft': '0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.03)',
+        'elevated': '0 4px 16px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04)',
+        'hover': '0 8px 30px rgba(0,0,0,0.1), 0 2px 6px rgba(0,0,0,0.04)',
+        'modal': '0 20px 60px rgba(0,0,0,0.15), 0 4px 12px rgba(0,0,0,0.06)',
+      },
+      letterSpacing: {
+        'editorial': '-0.025em',
+      }
+    }
+  }
+}
+</script>
+<style>
+body { font-family: Helvetica, Arial, Tahoma, Verdana, sans-serif; margin:0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.fade-in { animation: fadeIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.card-hover { transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.card-hover:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.1), 0 2px 6px rgba(0,0,0,0.04); }
+.chat-slide-in { animation: slideIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.chat-slide-out { animation: slideOut 0.2s ease-out; }
+@keyframes slideIn { from { opacity: 0; transform: translateY(20px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes slideOut { from { opacity: 1; transform: translateY(0) scale(1); } to { opacity: 0; transform: translateY(20px) scale(0.95); } }
+.chat-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+.typing-indicator { display: inline-flex; gap: 2px; }
+.typing-indicator span { width: 6px; height: 6px; border-radius: 50%; background-color: #999; animation: typing 1.4s infinite; }
+.typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes typing { 0%, 60%, 100% { opacity: 0.3; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-8px); } }
+/* Google Translate widget styling */
+.translate-widget .goog-te-gadget { font-size: 0 !important; }
+.translate-widget .goog-te-gadget .goog-te-combo { font-size: 13px; font-family: Helvetica, Arial, sans-serif; border: 1px solid #e5e7eb; border-radius: 12px; padding: 6px 12px; background: #f9fafb; color: #6b7280; outline: none; cursor: pointer; appearance: auto; }
+.translate-widget .goog-te-gadget .goog-te-combo:focus { border-color: #ba0c2f; box-shadow: 0 0 0 2px rgba(186,12,47,0.15); }
+.translate-widget .goog-te-gadget > span { display: none !important; }
+.goog-te-banner-frame { display: none !important; }
+body { top: 0 !important; }
+::selection { background-color: #ba0c2f; color: white; }
+input:focus, select:focus, textarea:focus { outline: none; box-shadow: 0 0 0 2px rgba(186,12,47,0.15); border-color: #ba0c2f; }
+/* Accessibility: focus-visible for keyboard nav */
+button:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 2px solid #ba0c2f; outline-offset: 2px; border-radius: 4px; }
+/* Accessibility: reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in, .card-hover, .chat-slide-in, .chat-slide-out, .chat-pulse, .typing-indicator span { animation: none !important; transition: none !important; }
+  .card-hover:hover { transform: none; }
+}
+/* Accessibility: skip link */
+.skip-link { position: absolute; top: -40px; left: 0; padding: 8px 16px; background: #ba0c2f; color: white; z-index: 100; font-size: 14px; border-radius: 0 0 8px 0; }
+.skip-link:focus { top: 0; }
+</style>
 </head>
-<body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<body class="bg-gray-50/50">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div id="root"><div style="display:flex;align-items:center;justify-content:center;height:100vh;font-size:1.2rem;color:#666" role="status" aria-label="Loading">Loading District 214 Course Planner...</div></div>
+
+<script src="data.js"></script>
+
+<script>
+  // Load CMS-managed data
+  var CAREER_DATA = {};
+  var SITE_SETTINGS = {};
+  
+  Promise.all([
+    fetch('data/career-data.json').then(r => r.json()),
+    fetch('data/site-settings.json').then(r => r.json())
+  ]).then(([careerJson, settingsJson]) => {
+    // Convert career array to object keyed by title
+    careerJson.careers.forEach(c => {
+      CAREER_DATA[c.title] = {
+        salary: c.salary,
+        growth: c.growth,
+        outlook: c.outlook,
+        blsUrl: c.blsUrl,
+        onetCode: c.onetCode
+      };
+    });
+    SITE_SETTINGS = settingsJson;
+    document.title = settingsJson.siteTitle + ' ' + settingsJson.schoolYear;
+  }).catch(err => console.warn('CMS data load error:', err));
+</script>
+
+<script type="text/babel">
+const { useState, useMemo, useRef, useEffect } = React;
+
+// ===================== CLUSTER ICONS =====================
+function ClusterIcon({ clusterId, size = 40, className = "" }) {
+  const icons = {
+    afnr: (
+      <svg viewBox="0 0 40 40" width={size} height={size} className={className} aria-hidden="true" role="img">
+        <rect width="40" height="40" rx="8" fill="#ba0c2f"/>
+        <g fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M20 30V16"/>
+          <path d="M20 16c-2-4-7-5-8-2s2 6 8 2"/>
+          <path d="M20 16c2-4 7-5 8-2s-2 6-8 2"/>
+          <path d="M20 22c-3-2-7-1-7 2s4 4 7 1"/>
+          <path d="M20 22c3-2 7-1 7 2s-4 4-7 1"/>
+          <path d="M16 30h8"/>
+          <path d="M20 10c0-1.5 1.5-2 2-1"/>
+        </g>
+      </svg>
+    ),
+    ac: (
+      <svg viewBox="0 0 40 40" width={size} height={size} className={className} aria-hidden="true">
+        <rect width="40" height="40" rx="8" fill="#ba0c2f"/>
+        <g fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="16" cy="16" r="5"/>
+          <circle cx="24" cy="16" r="5"/>
+          <circle cx="20" cy="24" r="5"/>
+          <polygon points="18,14 18,18 22,16" fill="white" stroke="none"/>
+        </g>
+      </svg>
+    ),
+    fbs: (
+      <svg viewBox="0 0 40 40" width={size} height={size} className={className} aria-hidden="true">
+        <rect width="40" height="40" rx="8" fill="#ba0c2f"/>
+        <g fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="10" y="14" width="20" height="14" rx="2"/>
+          <path d="M16 14v-2a4 4 0 0 1 8 0v2"/>
+          <line x1="10" y1="20" x2="30" y2="20"/>
+          <rect x="18" y="18" width="4" height="4" rx="1" fill="white" stroke="none"/>
+        </g>
+      </svg>
+    ),
+    hst: (
+      <svg viewBox="0 0 40 40" width={size} height={size} className={className} aria-hidden="true">
+        <rect width="40" height="40" rx="8" fill="#ba0c2f"/>
+        <g fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M15 10c0 3 5 5 5 12"/>
+          <path d="M25 10c0 3-5 5-5 12"/>
+          <circle cx="20" cy="24" r="2" fill="white"/>
+          <line x1="20" y1="26" x2="20" y2="32"/>
+          <line x1="16" y1="30" x2="24" y2="30"/>
+          <circle cx="15" cy="10" r="1.5" fill="white"/>
+          <circle cx="25" cy="10" r="1.5" fill="white"/>
+        </g>
+      </svg>
+    ),
+    hps: (
+      <svg viewBox="0 0 40 40" width={size} height={size} className={className} aria-hidden="true">
+        <rect width="40" height="40" rx="8" fill="#ba0c2f"/>
+        <g fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="20" cy="13" r="4"/>
+          <path d="M12 28c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+          <circle cx="11" cy="16" r="3"/>
+          <path d="M8 27c0-3 2-5.5 5-6"/>
+          <circle cx="29" cy="16" r="3"/>
+          <path d="M32 27c0-3-2-5.5-5-6"/>
+        </g>
+      </svg>
+    ),
+    lpcs: (
+      <svg viewBox="0 0 40 40" width={size} height={size} className={className} aria-hidden="true">
+        <rect width="40" height="40" rx="8" fill="#ba0c2f"/>
+        <g fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="20" y1="8" x2="20" y2="14"/>
+          <line x1="10" y1="14" x2="30" y2="14"/>
+          <path d="M12 14l-2 14h4"/>
+          <path d="M28 14l2 14h-4"/>
+          <path d="M14 28a6 6 0 0 0 12 0"/>
+          <line x1="14" y1="28" x2="26" y2="28"/>
+          <circle cx="20" cy="21" r="2" fill="white"/>
+        </g>
+      </svg>
+    ),
+    it: (
+      <svg viewBox="0 0 40 40" width={size} height={size} className={className} aria-hidden="true">
+        <rect width="40" height="40" rx="8" fill="#ba0c2f"/>
+        <g fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="13" y="13" width="14" height="14" rx="2"/>
+          <rect x="17" y="17" width="6" height="6" rx="1"/>
+          <line x1="16" y1="13" x2="16" y2="9"/>
+          <line x1="20" y1="13" x2="20" y2="9"/>
+          <line x1="24" y1="13" x2="24" y2="9"/>
+          <line x1="16" y1="27" x2="16" y2="31"/>
+          <line x1="20" y1="27" x2="20" y2="31"/>
+          <line x1="24" y1="27" x2="24" y2="31"/>
+          <line x1="13" y1="16" x2="9" y2="16"/>
+          <line x1="13" y1="20" x2="9" y2="20"/>
+          <line x1="13" y1="24" x2="9" y2="24"/>
+          <line x1="27" y1="16" x2="31" y2="16"/>
+          <line x1="27" y1="20" x2="31" y2="20"/>
+          <line x1="27" y1="24" x2="31" y2="24"/>
+        </g>
+      </svg>
+    ),
+    mett: (
+      <svg viewBox="0 0 40 40" width={size} height={size} className={className} aria-hidden="true">
+        <rect width="40" height="40" rx="8" fill="#ba0c2f"/>
+        <g fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="20" cy="20" r="8"/>
+          <circle cx="20" cy="20" r="3"/>
+          <line x1="20" y1="12" x2="20" y2="9"/>
+          <line x1="20" y1="31" x2="20" y2="28"/>
+          <line x1="12" y1="20" x2="9" y2="20"/>
+          <line x1="31" y1="20" x2="28" y2="20"/>
+          <line x1="14.3" y1="14.3" x2="12.2" y2="12.2"/>
+          <line x1="27.8" y1="27.8" x2="25.7" y2="25.7"/>
+          <line x1="14.3" y1="25.7" x2="12.2" y2="27.8"/>
+          <line x1="27.8" y1="12.2" x2="25.7" y2="14.3"/>
+        </g>
+      </svg>
+    ),
+    stem: (
+      <svg viewBox="0 0 40 40" width={size} height={size} className={className} aria-hidden="true">
+        <rect width="40" height="40" rx="8" fill="#ba0c2f"/>
+        <g fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="20" cy="20" r="3"/>
+          <ellipse cx="20" cy="20" rx="11" ry="4.5"/>
+          <ellipse cx="20" cy="20" rx="11" ry="4.5" transform="rotate(60 20 20)"/>
+          <ellipse cx="20" cy="20" rx="11" ry="4.5" transform="rotate(120 20 20)"/>
+        </g>
+      </svg>
+    ),
+    tdl: (
+      <svg viewBox="0 0 40 40" width={size} height={size} className={className} aria-hidden="true">
+        <rect width="40" height="40" rx="8" fill="#ba0c2f"/>
+        <g fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="16" cy="20" r="7"/>
+          <circle cx="16" cy="20" r="2.5"/>
+          <line x1="23" y1="20" x2="32" y2="20"/>
+          <polyline points="28,16 32,20 28,24"/>
+          <line x1="16" y1="13" x2="16" y2="9"/>
+          <polyline points="13,11 16,9 19,11"/>
+        </g>
+      </svg>
+    )
+  };
+  return icons[clusterId] || (
+    <svg viewBox="0 0 40 40" width={size} height={size} className={className} aria-hidden="true">
+      <rect width="40" height="40" rx="8" fill="#ba0c2f"/>
+      <text x="20" y="25" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold">?</text>
+    </svg>
+  );
+}
+
+// ===================== AI ASSISTANT =====================
+function AIAssistant() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
+  const scrollToBottomOnOpen = useEffect(() => {
+    if (isOpen && messages.length === 0) {
+      setTimeout(() => scrollToBottom(), 100);
+    }
+  }, [isOpen]);
+
+  // Simple fuzzy search
+  const fuzzyMatch = (query, text) => {
+    const q = query.toLowerCase();
+    const t = text.toLowerCase();
+    let score = 0;
+    let qi = 0;
+    for (let i = 0; i < t.length && qi < q.length; i++) {
+      if (t[i] === q[qi]) {
+        score += 1;
+        qi++;
+      }
+    }
+    return qi === q.length ? score : -1;
+  };
+
+  // Search courses by name, description, department
+  const searchCourses = (query) => {
+    const q = query.toLowerCase();
+    return DATA.courses.filter(c =>
+      c.name.toLowerCase().includes(q) ||
+      (c.description && c.description.toLowerCase().includes(q)) ||
+      (c.department && c.department.toLowerCase().includes(q))
+    ).slice(0, 5);
+  };
+
+  // Search pathways and clusters
+  const searchPathways = (query) => {
+    const q = query.toLowerCase();
+    const results = [];
+    DATA.clusters.forEach(cluster => {
+      cluster.pathways.forEach(pathway => {
+        if (pathway.name.toLowerCase().includes(q) ||
+            (pathway.description && pathway.description.toLowerCase().includes(q)) ||
+            cluster.name.toLowerCase().includes(q)) {
+          results.push({ ...pathway, clusterName: cluster.name, clusterColor: cluster.color });
+        }
+      });
+    });
+    return results.slice(0, 5);
+  };
+
+  // Find matching counselor by school
+  const findCounselor = (schoolQuery) => {
+    const q = schoolQuery.toLowerCase();
+    return DATA.counselors.filter(c => c.school.toLowerCase().includes(q));
+  };
+
+  // Find matching school
+  const findSchool = (schoolQuery) => {
+    const q = schoolQuery.toLowerCase();
+    return DATA.schools.filter(s => s.name.toLowerCase().includes(q) || s.address.toLowerCase().includes(q));
+  };
+
+  // Course card component for assistant responses
+  const CourseCard = ({ course }) => (
+    <div className="bg-gray-50 rounded-lg p-3 mb-2 border-l-4 border-d214red">
+      <div className="font-medium text-gray-900 text-sm">{course.name}</div>
+      <div className="text-xs text-gray-500 mt-1">{course.code} • Grade {course.gradeLevel} • {course.creditSemester} credits/sem</div>
+      {course.description && <div className="text-xs text-gray-600 mt-2">{course.description.substring(0, 80)}...</div>}
+      {course.department && <div className="text-xs text-gray-400 mt-1">{course.department}</div>}
+    </div>
+  );
+
+  // Pathway card component
+  const PathwayCard = ({ pathway, clusterName, clusterColor }) => (
+    <div className="bg-gray-50 rounded-lg p-3 mb-2 border-l-4" style={{borderLeftColor: clusterColor || '#ba0c2f'}}>
+      <div className="font-medium text-gray-900 text-sm">{pathway.name}</div>
+      <div className="text-xs text-gray-500 mt-1">{clusterName}</div>
+      {pathway.description && <div className="text-xs text-gray-600 mt-2">{pathway.description.substring(0, 80)}...</div>}
+    </div>
+  );
+
+  // Main AI logic
+  const processQuery = (query) => {
+    const q = query.toLowerCase();
+
+    // Greeting
+    if (q.match(/^(hi|hello|hey|greetings)/)) {
+      return {
+        type: 'text',
+        text: "Hello! I can help you explore D214 courses, career pathways, graduation requirements, and more. For personalized guidance, please meet with your school counselor. What would you like to look up?"
+      };
+    }
+
+    // What can I help with
+    if (q.match(/^(what|how|help|can you|do you)/)) {
+      return {
+        type: 'help',
+        text: "I can help you look up:"
+      };
+    }
+
+    // Course searches
+    if (q.match(/course|class|subject|math|english|science|engineering|computer|technology|business|arts|language/)) {
+      const courses = searchCourses(query);
+      if (courses.length > 0) {
+        return {
+          type: 'courses',
+          text: `Found ${courses.length} course${courses.length !== 1 ? 's' : ''} matching your interests:`,
+          data: courses
+        };
+      }
+      return {
+        type: 'text',
+        text: "I couldn't find courses matching that query. Try searching by department (like 'Engineering', 'Business', 'Health Sciences') or by level (like 'Grade 9' or 'Grade 12')."
+      };
+    }
+
+    // Pathway/cluster searches
+    if (q.match(/pathway|career|cluster|interested in|explore|what.*career|health|engineering|business|technology|arts|skilled trades|manufacturing|agriculture|finance|hospitality|law|marketing|human|information|transportation/)) {
+      const pathways = searchPathways(query);
+      if (pathways.length > 0) {
+        return {
+          type: 'pathways',
+          text: `I found ${pathways.length} matching pathway${pathways.length !== 1 ? 's' : ''}:`,
+          data: pathways
+        };
+      }
+      const clusters = DATA.clusters.filter(c =>
+        c.name.toLowerCase().includes(query.toLowerCase())
+      );
+      if (clusters.length > 0) {
+        return {
+          type: 'clusters',
+          text: `Here are our career clusters:`,
+          data: clusters
+        };
+      }
+      return {
+        type: 'text',
+        text: "We have 39 career pathways across 10 industry clusters. Try asking about specific interests like 'engineering', 'health sciences', 'business', or 'skilled trades'. Meet with your school counselor to discuss which pathway is right for you."
+      };
+    }
+
+    // Graduation requirements
+    if (q.match(/graduat|requirement|needed|credit|need to gradu|how many credit/)) {
+      return {
+        type: 'gradReqs',
+        text: "Here are D214's graduation requirements. Meet with your school counselor to make sure you're on track:",
+        data: DATA.gradReqs
+      };
+    }
+
+    // University/college requirements
+    if (q.match(/universit|college|admission|admission requirement|prepare for college|college prep|4-year|what.*need for college/)) {
+      return {
+        type: 'uniReqs',
+        text: "Here are the recommended preparations for competitive 4-year university admission. Meet with your school counselor to plan your courses:",
+        data: DATA.uniReqs
+      };
+    }
+
+    // Counselor search
+    if (q.match(/counselor|advisor|guidance|rolling meadows|prospect|elk grove|mt. prospect|buffalo grove|wheeling|contact|phone|email/)) {
+      const schoolMatch = query.match(/at\s+(\w+(?:\s+\w+)?)/i) || query.match(/(rolling meadows|prospect|elk grove|mt\. prospect|buffalo grove|wheeling)/i);
+      if (schoolMatch) {
+        const school = schoolMatch[1];
+        const counselors = findCounselor(school);
+        if (counselors.length > 0) {
+          return {
+            type: 'counselors',
+            text: `College counselors at ${school}:`,
+            data: counselors
+          };
+        }
+      }
+      return {
+        type: 'text',
+        text: "We have college counselors at all six D214 schools. Try asking 'who is my counselor at [school name]' or 'contact counselor at [school]'."
+      };
+    }
+
+    // School info
+    if (q.match(/school|location|address|rolling meadows|prospect|elk grove|mt\. prospect|buffalo grove|wheeling|where|contact/)) {
+      const schools = findSchool(query);
+      if (schools.length > 0) {
+        return {
+          type: 'schools',
+          text: `School information:`,
+          data: schools
+        };
+      }
+      return {
+        type: 'text',
+        text: "We have 6 schools in District 214. Ask about a specific school like 'Prospect High School' or 'Rolling Meadows' to get contact information and addresses."
+      };
+    }
+
+    // Default helpful response
+    return {
+      type: 'text',
+      text: "I can help you search courses, explore career pathways, look up graduation requirements, and find school contact info. For personalized guidance, please meet with your school counselor. What would you like to look up?"
+    };
+  };
+
+  const handleSend = () => {
+    if (!input.trim()) return;
+
+    const userMsg = { role: 'user', content: input };
+    setMessages(prev => [...prev, userMsg]);
+    setInput('');
+    setIsLoading(true);
+
+    // Simulate brief thinking time
+    setTimeout(() => {
+      const response = processQuery(input);
+
+      let contentElement;
+      if (response.type === 'text' || response.type === 'help') {
+        contentElement = <div>{response.text}</div>;
+      } else if (response.type === 'courses') {
+        contentElement = (
+          <div>
+            <div>{response.text}</div>
+            <div className="mt-3">
+              {response.data.map(c => <CourseCard key={c.code} course={c} />)}
+            </div>
+          </div>
+        );
+      } else if (response.type === 'pathways') {
+        contentElement = (
+          <div>
+            <div>{response.text}</div>
+            <div className="mt-3">
+              {response.data.map((p, i) => <PathwayCard key={i} pathway={p} clusterName={p.clusterName} clusterColor={p.clusterColor} />)}
+            </div>
+          </div>
+        );
+      } else if (response.type === 'clusters') {
+        contentElement = (
+          <div>
+            <div>{response.text}</div>
+            <div className="space-y-2 mt-3">
+              {response.data.map(c => (
+                <div key={c.id} className="bg-gray-50 rounded-lg p-3 flex items-center gap-3">
+                  <ClusterIcon clusterId={c.id} size={32} />
+                  <div>
+                    <div className="font-medium text-gray-900 text-sm">{c.name}</div>
+                    <div className="text-xs text-gray-500 mt-0.5">{c.pathways.length} pathways • {c.abbrev}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      } else if (response.type === 'gradReqs') {
+        contentElement = (
+          <div>
+            <div>{response.text}</div>
+            <div className="space-y-2 mt-3">
+              {Object.entries(response.data).map(([key, req]) => (
+                <div key={key} className="bg-gray-50 rounded-lg p-3 border-l-4 border-d214red">
+                  <div className="font-medium text-gray-900 text-sm">{req.name}</div>
+                  <div className="text-xs text-gray-600 mt-1">{req.notes}</div>
+                  {typeof req.credits === 'number' && req.credits > 0 && <div className="text-xs text-gray-500 mt-1">{req.credits} credit unit{req.credits !== 1 ? 's' : ''}</div>}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      } else if (response.type === 'uniReqs') {
+        contentElement = (
+          <div>
+            <div>{response.text}</div>
+            <div className="space-y-2 mt-3">
+              {Object.entries(response.data).map(([key, val]) => (
+                <div key={key} className="flex items-center gap-2">
+                  <div className="font-medium text-gray-900 text-sm">{key}:</div>
+                  <div className="text-sm text-gray-600">{val}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      } else if (response.type === 'counselors') {
+        contentElement = (
+          <div>
+            <div>{response.text}</div>
+            <div className="space-y-2 mt-3">
+              {response.data.map((c, i) => (
+                <div key={i} className="bg-gray-50 rounded-lg p-3 border-l-4 border-blue-600">
+                  <div className="font-medium text-gray-900 text-sm">{c.name}</div>
+                  <div className="text-xs text-gray-600 mt-1">{c.phone}</div>
+                  <a href={`mailto:${c.email}`} className="text-xs text-blue-600 hover:underline">{c.email}</a>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      } else if (response.type === 'schools') {
+        contentElement = (
+          <div>
+            <div>{response.text}</div>
+            <div className="space-y-2 mt-3">
+              {response.data.map((s, i) => (
+                <div key={i} className="bg-gray-50 rounded-lg p-3 border-l-4 border-d214red">
+                  <div className="font-medium text-gray-900 text-sm">{s.name}</div>
+                  <div className="text-xs text-gray-600 mt-1">{s.address}</div>
+                  <div className="text-xs text-gray-600">{s.phone}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      }
+
+      const assistantMsg = { role: 'assistant', content: contentElement };
+      setMessages(prev => [...prev, assistantMsg]);
+      setIsLoading(false);
+    }, 500);
+  };
+
+  const quickActions = [
+    { label: 'Find Courses', query: 'What math courses are available?' },
+    { label: 'Career Pathways', query: 'Tell me about career pathways' },
+    { label: 'Graduation Requirements', query: 'What do I need to graduate?' },
+    { label: 'University Prep', query: 'How do I prepare for college?' }
+  ];
+
+  if (!isOpen) {
+    return (
+      <button
+        onClick={() => setIsOpen(true)}
+        className="fixed bottom-6 right-6 w-14 h-14 bg-d214red text-white rounded-full shadow-elevated hover:shadow-hover hover:scale-105 transition-all duration-200 z-40 flex items-center justify-center"
+        title="Open D214 Course Explorer"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+        </svg>
+      </button>
+    );
+  }
+
+  return (
+    <div className="fixed bottom-6 right-6 w-96 max-h-96 bg-white rounded-2xl shadow-modal flex flex-col z-40 chat-slide-in border border-gray-100" style={{maxHeight: '600px'}}>
+      {/* Header */}
+      <div className="bg-d214red text-white rounded-t-2xl p-5 flex justify-between items-start">
+        <div>
+          <h3 className="font-bold text-lg tracking-tight">D214 Course Explorer</h3>
+          <p className="text-xs text-red-200 italic mt-0.5"><span className="font-bold">Discover</span> <span className="font-light">your future.</span></p>
+        </div>
+        <button
+          onClick={() => setIsOpen(false)}
+          className="text-white hover:bg-red-600 p-1 rounded-lg transition"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Messages Area */}
+      <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-gray-50" role="log" aria-live="polite" aria-label="Chat messages">
+        {messages.length === 0 ? (
+          <div className="h-full flex flex-col justify-center items-center text-center">
+            <div className="text-4xl mb-2">Hi there!</div>
+            <p className="text-sm text-gray-600 mb-4">Search D214 courses, pathways, and graduation info. For personalized planning, meet with your school counselor.</p>
+            <div className="space-y-2 w-full">
+              {quickActions.map((action, i) => (
+                <button
+                  key={i}
+                  onClick={() => {
+                    setInput(action.query);
+                    setTimeout(() => {
+                      const userMsg = { role: 'user', content: action.query };
+                      setMessages([userMsg]);
+                      setInput('');
+                      setIsLoading(true);
+                      setTimeout(() => {
+                        const response = processQuery(action.query);
+                        let contentElement;
+                        if (response.type === 'text' || response.type === 'help') {
+                          contentElement = <div>{response.text}</div>;
+                        } else if (response.type === 'courses') {
+                          contentElement = (
+                            <div>
+                              <div>{response.text}</div>
+                              <div className="mt-3">
+                                {response.data.map(c => <CourseCard key={c.code} course={c} />)}
+                              </div>
+                            </div>
+                          );
+                        } else if (response.type === 'pathways') {
+                          contentElement = (
+                            <div>
+                              <div>{response.text}</div>
+                              <div className="mt-3">
+                                {response.data.map((p, i) => <PathwayCard key={i} pathway={p} clusterName={p.clusterName} clusterColor={p.clusterColor} />)}
+                              </div>
+                            </div>
+                          );
+                        } else if (response.type === 'gradReqs') {
+                          contentElement = (
+                            <div>
+                              <div>{response.text}</div>
+                              <div className="space-y-2 mt-3">
+                                {Object.entries(response.data).map(([key, req]) => (
+                                  <div key={key} className="bg-gray-50 rounded-lg p-3 border-l-4 border-d214red">
+                                    <div className="font-medium text-gray-900 text-sm">{req.name}</div>
+                                    <div className="text-xs text-gray-600 mt-1">{req.notes}</div>
+                                    {typeof req.credits === 'number' && req.credits > 0 && <div className="text-xs text-gray-500 mt-1">{req.credits} credit unit{req.credits !== 1 ? 's' : ''}</div>}
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          );
+                        } else if (response.type === 'uniReqs') {
+                          contentElement = (
+                            <div>
+                              <div>{response.text}</div>
+                              <div className="space-y-2 mt-3">
+                                {Object.entries(response.data).map(([key, val]) => (
+                                  <div key={key} className="flex items-center gap-2">
+                                    <div className="font-medium text-gray-900 text-sm">{key}:</div>
+                                    <div className="text-sm text-gray-600">{val}</div>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          );
+                        }
+                        const assistantMsg = { role: 'assistant', content: contentElement };
+                        setMessages(prev => [...prev, assistantMsg]);
+                        setIsLoading(false);
+                      }, 500);
+                    }, 0);
+                  }}
+                  className="w-full text-left text-xs bg-white border border-d214red text-d214red rounded-lg px-3 py-2 hover:bg-red-50 transition"
+                >
+                  {action.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <>
+            {messages.map((msg, i) => (
+              <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                <div
+                  className={`max-w-[85%] rounded-lg p-3 text-sm ${
+                    msg.role === 'user'
+                      ? 'bg-d214red text-white'
+                      : 'bg-white border border-gray-200'
+                  }`}
+                >
+                  {typeof msg.content === 'string' ? msg.content : msg.content}
+                </div>
+              </div>
+            ))}
+            {isLoading && (
+              <div className="flex justify-start">
+                <div className="bg-white border border-gray-200 rounded-lg p-3 flex gap-1">
+                  <div className="typing-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            )}
+            <div ref={messagesEndRef} />
+          </>
+        )}
+      </div>
+
+      {/* Input Area */}
+      <div className="border-t bg-white rounded-b-2xl p-3 flex gap-2">
+        <input
+          type="text"
+          value={input}
+          onChange={e => setInput(e.target.value)}
+          onKeyPress={e => e.key === 'Enter' && handleSend()}
+          placeholder="Ask me anything..."
+          className="flex-1 border rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-d214red focus:outline-none"
+          disabled={isLoading}
+          aria-label="Ask a question about D214 courses and pathways"
+        />
+        <button
+          onClick={handleSend}
+          disabled={isLoading || !input.trim()}
+          className="bg-d214red text-white rounded-lg px-4 py-2 text-sm font-medium hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed transition"
+        >
+          Send
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  const [tab, setTab] = useState('home');
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const tabs = [
+    { id:'home', label:'Home' },
+    { id:'pathways', label:'Career Pathways' },
+    { id:'courses', label:'Course Catalog' },
+    { id:'planner', label:'My 4-Year Plan' },
+    { id:'resources', label:'Resources' }
+  ];
+
+  return (
+    <div className="min-h-screen">
+      <header className="bg-white border-b border-gray-100 sticky top-0 z-50" role="banner">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 py-4 md:py-5">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center gap-4 cursor-pointer group" onClick={() => setTab('home')}>
+              <img src="d214-logo.png" alt="District 214 High School District" className="h-11 sm:h-14 transition-transform group-hover:scale-[1.02]" />
+              <div className="hidden sm:block">
+                <p className="text-xs text-gray-400 tracking-wide uppercase">Academic Programs &amp; Pathways 2026–2027</p>
+                <p className="text-sm text-d214red italic mt-0.5"><span className="font-bold">Discover</span> <span className="font-light">your future.</span></p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div id="google_translate_element" className="translate-widget"></div>
+              <button className="md:hidden p-3 rounded-xl hover:bg-gray-50 transition-colors" onClick={() => setMobileOpen(!mobileOpen)} aria-label={mobileOpen ? 'Close menu' : 'Open menu'} aria-expanded={mobileOpen}>
+              <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {mobileOpen ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12"/> :
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16"/>}
+              </svg>
+            </button>
+            </div>
+          </div>
+          <nav className="hidden md:flex gap-1 mt-4" role="navigation" aria-label="Main navigation">
+            {tabs.map(t => (
+              <button key={t.id} onClick={() => setTab(t.id)}
+                className={`px-5 py-2.5 text-sm font-medium rounded-full transition-all duration-200 ${
+                  tab === t.id ? 'bg-d214red text-white shadow-soft' : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
+                }`}>
+                {t.label}
+              </button>
+            ))}
+          </nav>
+        </div>
+        {mobileOpen && (
+          <div className="md:hidden border-t border-gray-100 bg-white px-6 py-3">
+            {tabs.map(t => (
+              <button key={t.id} onClick={() => { setTab(t.id); setMobileOpen(false); }}
+                className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm transition-colors ${
+                  tab === t.id ? 'bg-d214red text-white font-medium' : 'text-gray-600 hover:bg-gray-50'
+                }`}>
+                {t.label}
+              </button>
+            ))}
+          </div>
+        )}
+      </header>
+
+      <main id="main-content" className="max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12" role="main">
+        <div className="fade-in" key={tab}>
+          {tab === 'home' && <HomeTab onNavigate={setTab} />}
+          {tab === 'pathways' && <PathwaysTab />}
+          {tab === 'courses' && <CoursesTab />}
+          {tab === 'planner' && <PlannerTab />}
+          {tab === 'resources' && <ResourcesTab />}
+        </div>
+      </main>
+
+      <footer className="bg-gray-900 text-center py-14 md:py-20 mt-16" role="contentinfo">
+        <img src="d214-logo-dark.png" alt="District 214" className="h-14 md:h-16 mx-auto mb-6" />
+        <p className="text-white text-lg italic mb-6"><span className="font-bold">Discover</span> <span className="font-light">your future.</span></p>
+        <div className="w-12 h-px bg-gray-700 mx-auto mb-6"></div>
+        <p className="text-gray-500 text-sm">2026–2027 Academic Programs &amp; Pathways Guidebook</p>
+        <p className="text-gray-600 text-xs mt-3 tracking-wider">www.d214.org &nbsp;&bull;&nbsp; @District214</p>
+      </footer>
+
+      <AIAssistant />
+    </div>
+  );
+}
+
+// ===================== HOME =====================
+function HomeTab({ onNavigate }) {
+  const stats = [
+    { num: DATA.courses.length, label: 'Courses' },
+    { num: DATA.clusters.reduce((a,c) => a + c.pathways.length, 0), label: 'Pathways' },
+    { num: DATA.clusters.length, label: 'Career Clusters' },
+    { num: DATA.schools.length, label: 'High Schools' }
+  ];
+  const features = [
+    { title: 'Career Pathways', desc: 'Explore 39 career pathways across 10 industry clusters with recommended course sequences, future careers, and college programs.', tab: 'pathways', accent: 'border-d214red' },
+    { title: 'Course Catalog', desc: 'Search and filter all courses by department, grade level, or keyword. View prerequisites, descriptions, and NCAA eligibility.', tab: 'courses', accent: 'border-d214red' },
+    { title: 'My 4-Year Plan', desc: 'Build your custom four-year course schedule. Start from a pathway template or pick courses individually. Track graduation requirements.', tab: 'planner', accent: 'border-d214red' },
+    { title: 'Resources', desc: 'Graduation requirements, university admission info, school contacts, and college counselor directory.', tab: 'resources', accent: 'border-d214red' }
+  ];
+
+  return (
+    <div>
+      <div className="text-center mb-16 pt-4">
+        <h2 className="text-5xl md:text-6xl font-bold tracking-editorial text-gray-900 mb-6 leading-tight"><span className="italic text-d214red">Discover</span> <span className="italic font-light text-gray-800">your future.</span></h2>
+        <p className="text-gray-500 max-w-xl mx-auto text-lg leading-relaxed">Plan your high school journey. Explore career pathways, browse courses, and build your personalized four-year academic plan.</p>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-16">
+        {stats.map((s,i) => (
+          <div key={i} className="bg-white rounded-2xl shadow-soft p-6 md:p-8 text-center">
+            <div className="text-4xl md:text-5xl font-bold text-d214red tracking-tight">{s.num}</div>
+            <div className="text-sm text-gray-400 mt-2 font-medium">{s.label}</div>
+          </div>
+        ))}
+      </div>
+      <div className="grid sm:grid-cols-2 gap-6">
+        {features.map((f,i) => (
+          <div key={i} onClick={() => onNavigate(f.tab)} className={`bg-white rounded-2xl shadow-soft border-l-4 ${f.accent} p-8 cursor-pointer card-hover`}>
+            <h3 className="text-lg font-semibold mb-3 text-gray-900">{f.title}</h3>
+            <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
+            <span className="inline-block mt-5 text-sm font-medium text-d214red tracking-wide">{"Explore \u2192"}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ===================== PATHWAYS =====================
+function PathwaysTab() {
+  const [selectedCluster, setSelectedCluster] = useState(null);
+  const [selectedPathway, setSelectedPathway] = useState(null);
+
+  if (selectedPathway) {
+    const cluster = DATA.clusters.find(c => c.pathways.some(p => p.id === selectedPathway.id));
+    return (
+      <div>
+        <button onClick={() => setSelectedPathway(null)} className="text-gray-400 text-sm font-medium mb-6 hover:text-d214red transition-colors inline-flex items-center gap-1">{"\u2190"} Back to {cluster ? cluster.name : 'Pathways'}</button>
+        <div className="bg-white rounded-2xl shadow-elevated p-8 md:p-10">
+          {cluster && <span className="text-xs font-medium px-3 py-1.5 rounded-full mb-4 inline-flex items-center gap-2 bg-red50 text-d214red"><ClusterIcon clusterId={cluster.id} size={18} />{cluster.name}</span>}
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 tracking-editorial">{selectedPathway.name}</h2>
+          <p className="text-gray-500 mb-8 leading-relaxed max-w-3xl">{selectedPathway.description}</p>
+
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Recommended Course Sequence</h3>
+          <div className="grid sm:grid-cols-4 gap-4 mb-10">
+            {['9','10','11','12'].map(grade => (
+              <div key={grade} className="bg-gray-50 rounded-xl p-5">
+                <div className="text-xs font-bold text-d214red mb-3 uppercase tracking-wider">Grade {grade}</div>
+                {(selectedPathway.courseSequence[grade] || []).length > 0 ?
+                  selectedPathway.courseSequence[grade].map((c,i) => (
+                    <div key={i} className="text-sm text-gray-700 py-1.5 border-b border-gray-200 last:border-0">{c}</div>
+                  )) :
+                  <div className="text-sm text-gray-400 italic">No pathway courses</div>
+                }
+              </div>
+            ))}
+          </div>
+
+          {selectedPathway.careers && selectedPathway.careers.length > 0 && (
+            <div className="mb-10">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Future Careers &amp; Salary Outlook</h3>
+              <p className="text-xs text-gray-500 mb-4">Salary and job outlook data from the <a href="https://www.bls.gov/ooh/" target="_blank" rel="noopener noreferrer" className="text-d214red hover:underline">U.S. Bureau of Labor Statistics</a>. Meet with your school counselor for personalized guidance.</p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {selectedPathway.careers.map((career, i) => {
+                  const cd = (typeof CAREER_DATA !== 'undefined') ? CAREER_DATA[career] : null;
+                  return (
+                    <div key={i} className="bg-gray-50 rounded-xl p-4 flex flex-col">
+                      <div className="font-medium text-gray-900 text-sm mb-2">{career}</div>
+                      {cd ? (
+                        <div className="flex-1">
+                          <div className="flex items-baseline gap-3 mb-1.5">
+                            <span className="text-lg font-bold text-d214red">${cd.salary >= 100000 ? (cd.salary/1000).toFixed(0) + 'k' : (cd.salary/1000).toFixed(1) + 'k'}</span>
+                            <span className="text-xs text-gray-500">median salary</span>
+                          </div>
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${cd.growth.startsWith('-') ? 'bg-red-100 text-red-700' : cd.outlook === 'Much faster than average' ? 'bg-green-100 text-green-700' : 'bg-blue-50 text-blue-700'}`}>{cd.growth}</span>
+                            <span className="text-xs text-gray-500">{cd.outlook}</span>
+                          </div>
+                          <a href={cd.blsUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-d214red hover:underline font-medium">View on BLS.gov {"\u2192"}</a>
+                        </div>
+                      ) : (
+                        <div className="text-xs text-gray-400 italic">Salary data not available</div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          <div className="grid sm:grid-cols-2 gap-8">
+            {[
+              { items: selectedPathway.relatedElectives, title: 'Career Related Electives' },
+              { items: selectedPathway.collegePrograms, title: 'Potential College Programs' },
+              { items: selectedPathway.certifications, title: 'Industry Certifications' },
+              { items: selectedPathway.workBasedLearning, title: 'Work-Based Learning' },
+              { items: selectedPathway.activities, title: 'Career Related Activities' }
+            ].filter(s => s.items && s.items.length > 0).map((section, idx) => (
+              <div key={idx}>
+                <h4 className="font-semibold text-gray-900 mb-3 text-sm uppercase tracking-wider">{section.title}</h4>
+                <ul className="space-y-1.5">{section.items.map((item,i) => <li key={i} className="text-sm text-gray-600 flex items-start gap-2"><span className="text-d214red mt-1 text-xs">{"\u25CF"}</span>{item}</li>)}</ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (selectedCluster) {
+    return (
+      <div>
+        <button onClick={() => setSelectedCluster(null)} className="text-gray-400 text-sm font-medium mb-6 hover:text-d214red transition-colors inline-flex items-center gap-1">{"\u2190"} All Career Clusters</button>
+        <div className="mb-8 flex items-center gap-5">
+          <ClusterIcon clusterId={selectedCluster.id} size={56} />
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 tracking-editorial">{selectedCluster.name}</h2>
+            <p className="text-gray-400 text-sm mt-1">{selectedCluster.abbrev} &bull; {selectedCluster.pathways.length} pathways</p>
+          </div>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {selectedCluster.pathways.map(p => (
+            <div key={p.id} onClick={() => setSelectedPathway(p)} className="bg-white rounded-2xl shadow-soft p-6 cursor-pointer card-hover">
+              <h3 className="font-semibold text-gray-900 mb-2">{p.name}</h3>
+              <p className="text-sm text-gray-500 mb-4 leading-relaxed" style={{display:'-webkit-box', WebkitLineClamp:2, WebkitBoxOrient:'vertical', overflow:'hidden'}}>{p.description}</p>
+              <div className="flex flex-wrap gap-1.5">
+                {(p.careers || []).slice(0,3).map((c,i) => (
+                  <span key={i} className="text-xs bg-gray-50 text-gray-500 px-2.5 py-1 rounded-full">{c}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <h2 className="text-3xl font-bold text-gray-900 mb-2 tracking-editorial">Career Clusters &amp; Pathways</h2>
+      <p className="text-gray-500 mb-8">Explore 10 career clusters and 39 pathways to find the right fit for your interests and goals.</p>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {DATA.clusters.map(c => (
+          <div key={c.id} onClick={() => setSelectedCluster(c)} onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), setSelectedCluster(c))} tabIndex={0} role="button" aria-label={`${c.name} - ${c.pathways.length} pathways`} className="bg-white rounded-2xl shadow-soft p-6 cursor-pointer card-hover">
+            <div className="flex items-center gap-4 mb-4">
+              <ClusterIcon clusterId={c.id} size={44} />
+              <div>
+                <h3 className="font-semibold text-gray-900">{c.name}</h3>
+                <p className="text-xs text-gray-400 mt-0.5">{c.pathways.length} pathways</p>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-1.5">
+              {c.pathways.slice(0,3).map((p,i) => (
+                <span key={i} className="text-xs bg-gray-50 text-gray-500 px-2.5 py-1 rounded-full">{p.name}</span>
+              ))}
+              {c.pathways.length > 3 && <span className="text-xs text-gray-400">+{c.pathways.length - 3} more</span>}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ===================== COURSES =====================
+function CoursesTab() {
+  const [search, setSearch] = useState('');
+  const [dept, setDept] = useState('');
+  const [grade, setGrade] = useState('');
+  const [courseType, setCourseType] = useState('');
+  const [expanded, setExpanded] = useState(null);
+  const [sortBy, setSortBy] = useState('name');
+  const PAGE_SIZE = 50;
+  const [showCount, setShowCount] = useState(PAGE_SIZE);
+
+  const getCourseType = (c) => {
+    if (c.name.startsWith('AP ')) return 'ap';
+    if (c.name.startsWith('College ')) return 'dc';
+    if (c.name.includes('Honors')) return 'honors';
+    return null;
+  };
+
+  const apCount = useMemo(() => DATA.courses.filter(c => c.name.startsWith('AP ')).length, []);
+  const dcCount = useMemo(() => DATA.courses.filter(c => c.name.startsWith('College ')).length, []);
+  const honorsCount = useMemo(() => DATA.courses.filter(c => c.name.includes('Honors')).length, []);
+
+  const departments = useMemo(() => {
+    const d = new Set();
+    DATA.courses.forEach(c => { if(c.department) d.add(c.department); });
+    return Array.from(d).sort();
+  }, []);
+
+  const filtered = useMemo(() => {
+    let result = DATA.courses.filter(c => {
+      if (search && !c.name.toLowerCase().includes(search.toLowerCase()) && !c.code.includes(search)) return false;
+      if (dept && c.department !== dept) return false;
+      if (grade && !c.gradeLevel.includes(grade)) return false;
+      if (courseType) {
+        const ct = getCourseType(c);
+        if (courseType === 'ap' && ct !== 'ap') return false;
+        if (courseType === 'dc' && ct !== 'dc') return false;
+        if (courseType === 'honors' && ct !== 'honors') return false;
+      }
+      return true;
+    });
+    result.sort((a,b) => {
+      if (sortBy === 'name') return a.name.localeCompare(b.name);
+      if (sortBy === 'code') return a.code.localeCompare(b.code);
+      if (sortBy === 'dept') return (a.department||'').localeCompare(b.department||'');
+      return 0;
+    });
+    return result;
+  }, [search, dept, grade, courseType, sortBy]);
+
+  const visible = filtered.slice(0, showCount);
+
+  return (
+    <div>
+      <h2 className="text-3xl font-bold text-gray-900 mb-2 tracking-editorial">Course Catalog</h2>
+      <p className="text-gray-500 mb-6">{DATA.courses.length} courses available. Search, filter, and view full course details.</p>
+
+      <div className="bg-white rounded-2xl shadow-soft p-5 md:p-6 mb-6">
+        <div className="grid sm:grid-cols-4 gap-4 mb-4">
+          <input type="text" placeholder="Search by name or code..." value={search} onChange={e => { setSearch(e.target.value); setShowCount(PAGE_SIZE); }}
+            className="border border-gray-200 rounded-xl px-4 py-2.5 text-sm bg-gray-50 focus:bg-white transition-colors" aria-label="Search courses by name or code" />
+          <select value={dept} onChange={e => { setDept(e.target.value); setShowCount(PAGE_SIZE); }} className="border border-gray-200 rounded-xl px-4 py-2.5 text-sm bg-gray-50" aria-label="Filter by department">
+            <option value="">All Departments</option>
+            {departments.map(d => <option key={d} value={d}>{d}</option>)}
+          </select>
+          <select value={grade} onChange={e => { setGrade(e.target.value); setShowCount(PAGE_SIZE); }} className="border border-gray-200 rounded-xl px-4 py-2.5 text-sm bg-gray-50" aria-label="Filter by grade level">
+            <option value="">All Grade Levels</option>
+            {['9','10','11','12'].map(g => <option key={g} value={g}>Grade {g}</option>)}
+          </select>
+          <select value={sortBy} onChange={e => setSortBy(e.target.value)} className="border border-gray-200 rounded-xl px-4 py-2.5 text-sm bg-gray-50" aria-label="Sort courses by">
+            <option value="name">Sort by Name</option>
+            <option value="code">Sort by Code</option>
+            <option value="dept">Sort by Department</option>
+          </select>
+        </div>
+        <div className="flex gap-2 flex-wrap">
+          <button onClick={() => { setCourseType(courseType === 'ap' ? '' : 'ap'); setShowCount(PAGE_SIZE); }}
+            className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all ${courseType === 'ap' ? 'bg-blue-600 text-white shadow-soft' : 'bg-blue-50 text-blue-700 hover:bg-blue-100'}`}>
+            <span className="w-1.5 h-1.5 rounded-full bg-current"></span> AP Courses ({apCount})
+          </button>
+          <button onClick={() => { setCourseType(courseType === 'dc' ? '' : 'dc'); setShowCount(PAGE_SIZE); }}
+            className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all ${courseType === 'dc' ? 'bg-amber-600 text-white shadow-soft' : 'bg-amber-50 text-amber-700 hover:bg-amber-100'}`}>
+            <span className="w-1.5 h-1.5 rounded-full bg-current"></span> Dual Credit ({dcCount})
+          </button>
+          <button onClick={() => { setCourseType(courseType === 'honors' ? '' : 'honors'); setShowCount(PAGE_SIZE); }}
+            className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all ${courseType === 'honors' ? 'bg-purple-600 text-white shadow-soft' : 'bg-purple-50 text-purple-700 hover:bg-purple-100'}`}>
+            <span className="w-1.5 h-1.5 rounded-full bg-current"></span> Honors ({honorsCount})
+          </button>
+          {courseType && <button onClick={() => { setCourseType(''); setShowCount(PAGE_SIZE); }} className="text-xs text-gray-400 hover:text-gray-600 px-2 transition-colors">Clear filter</button>}
+        </div>
+      </div>
+
+      <p className="text-xs text-gray-500 mb-4 uppercase tracking-wider font-medium">Showing {Math.min(showCount, filtered.length)} of {filtered.length} courses</p>
+
+      <div className="space-y-2">
+        {visible.map(c => (
+          <div key={c.code + c.name} className="bg-white rounded-xl shadow-soft overflow-hidden transition-all duration-200 hover:shadow-elevated">
+            <div className="flex items-center justify-between px-5 py-4 cursor-pointer" role="button" tabIndex={0} aria-expanded={expanded === c.code} aria-label={`${c.name} - click to ${expanded === c.code ? 'collapse' : 'expand'} details`} onClick={() => setExpanded(expanded === c.code ? null : c.code)} onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), setExpanded(expanded === c.code ? null : c.code))}>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2.5 flex-wrap">
+                  <span className="font-medium text-gray-900">{c.name}</span>
+                  <span className="text-xs text-gray-500 font-mono bg-gray-100 px-2 py-0.5 rounded-md">{c.code}</span>
+                  {c.name.startsWith('AP ') && <span className="text-xs bg-blue-100 text-blue-700 px-2.5 py-0.5 rounded-full font-semibold">AP</span>}
+                  {c.name.startsWith('College ') && <span className="text-xs bg-amber-100 text-amber-700 px-2.5 py-0.5 rounded-full font-semibold">Dual Credit</span>}
+                  {c.name.includes('Honors') && <span className="text-xs bg-purple-100 text-purple-700 px-2.5 py-0.5 rounded-full font-semibold">Honors</span>}
+                  {c.ncaa && <span className="text-xs bg-green-50 text-green-600 px-2 py-0.5 rounded-full font-medium">NCAA</span>}
+                </div>
+                <div className="flex gap-3 mt-1.5 text-xs text-gray-600">
+                  <span>Grade {c.gradeLevel}</span>
+                  <span>{c.creditSemester} credits/sem</span>
+                  {c.department && <span className="text-gray-500">{c.department}</span>}
+                </div>
+              </div>
+              <svg className={`w-4 h-4 text-gray-300 transition-transform duration-200 ${expanded === c.code ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            {expanded === c.code && (
+              <div className="px-5 pb-5 border-t border-gray-100 bg-gray-50">
+                <div className="grid sm:grid-cols-2 gap-4 mt-4">
+                  <div><span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Prerequisite</span><p className="text-sm text-gray-800 mt-1">{c.prerequisite || 'None'}</p></div>
+                  <div><span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Department</span><p className="text-sm text-gray-800 mt-1">{c.department || 'N/A'}</p></div>
+                </div>
+                {c.description && (
+                  <div className="mt-4"><span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Description</span><p className="text-sm text-gray-700 mt-1 leading-relaxed">{c.description}</p></div>
+                )}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {showCount < filtered.length && (
+        <button onClick={() => setShowCount(s => s + PAGE_SIZE)} className="mt-6 w-full py-3 bg-white rounded-xl shadow-soft text-sm font-medium text-gray-600 hover:text-d214red hover:shadow-elevated transition-all duration-200">
+          Load More ({filtered.length - showCount} remaining)
+        </button>
+      )}
+    </div>
+  );
+}
+
+// ===================== PLANNER =====================
+function PlannerTab() {
+  const [plan, setPlan] = useState({ 9:[], 10:[], 11:[], 12:[] });
+  const [addingGrade, setAddingGrade] = useState(null);
+  const [courseSearch, setCourseSearch] = useState('');
+  const [templateCluster, setTemplateCluster] = useState('');
+  const [templatePathway, setTemplatePathway] = useState('');
+
+  const addCourse = (grade, course) => {
+    if (plan[grade].some(c => c.code === course.code)) return;
+    setPlan(p => ({ ...p, [grade]: [...p[grade], course] }));
+    setCourseSearch('');
+    setAddingGrade(null);
+  };
+
+  const removeCourse = (grade, code) => {
+    setPlan(p => ({ ...p, [grade]: p[grade].filter(c => c.code !== code) }));
+  };
+
+  const loadTemplate = () => {
+    if (!templatePathway) return;
+    const cluster = DATA.clusters.find(c => c.id === templateCluster);
+    if (!cluster) return;
+    const pathway = cluster.pathways.find(p => p.id === templatePathway);
+    if (!pathway) return;
+
+    const newPlan = { 9:[], 10:[], 11:[], 12:[] };
+    ['9','10','11','12'].forEach(g => {
+      const courseNames = pathway.courseSequence[g] || [];
+      courseNames.forEach(name => {
+        const searchName = name.toLowerCase().substring(0, 20);
+        const match = DATA.courses.find(c => c.name.toLowerCase().includes(searchName));
+        if (match) {
+          newPlan[parseInt(g)].push(match);
+        } else {
+          newPlan[parseInt(g)].push({ name: name, code: 'TBD', gradeLevel: g, creditSemester: '0.5', department: 'Pathway', description: '', prerequisite: '', ncaa: false });
+        }
+      });
+    });
+    setPlan(newPlan);
+  };
+
+  const totalCredits = (grade) => plan[grade].reduce((sum, c) => sum + (parseFloat(c.creditSemester) || 0), 0);
+  const allCredits = [9,10,11,12].reduce((sum,g) => sum + totalCredits(g), 0);
+
+  const deptCredits = useMemo(() => {
+    const dc = {};
+    [9,10,11,12].forEach(g => {
+      plan[g].forEach(c => {
+        const d = c.department || 'Other';
+        dc[d] = (dc[d] || 0) + (parseFloat(c.creditSemester) || 0);
+      });
+    });
+    return dc;
+  }, [plan]);
+
+  const reqProgress = [
+    { name: 'English', have: deptCredits['English'] || 0, need: 4.0 },
+    { name: 'Mathematics', have: deptCredits['Mathematics'] || 0, need: 3.0 },
+    { name: 'Social Science', have: deptCredits['Social Science'] || 0, need: 2.0 },
+    { name: 'Science', have: deptCredits['Science'] || 0, need: 2.0 },
+    { name: 'CTE', have: deptCredits['Career and Technical Education'] || 0, need: 1.0 },
+    { name: 'Fine Arts', have: deptCredits['Fine Arts'] || 0, need: 0.25 }
+  ];
+
+  const searchResults = useMemo(() => {
+    if (!courseSearch || courseSearch.length < 2 || !addingGrade) return [];
+    const gradeStr = String(addingGrade);
+    return DATA.courses.filter(c =>
+      (c.name.toLowerCase().includes(courseSearch.toLowerCase()) || c.code.includes(courseSearch)) &&
+      c.gradeLevel.includes(gradeStr)
+    ).slice(0, 15);
+  }, [courseSearch, addingGrade]);
+
+  const selectedClusterObj = DATA.clusters.find(c => c.id === templateCluster);
+
+  const printPlan = () => {
+    const w = window.open('', '_blank');
+    const html = `<!DOCTYPE html><html><head><title>My 4-Year Plan - District 214</title>
+    <style>
+      body { font-family: Helvetica, Arial, sans-serif; margin: 40px; color: #1a1a1a; }
+      h1 { font-size: 22px; color: #ba0c2f; margin-bottom: 4px; }
+      .subtitle { font-size: 12px; color: #888; margin-bottom: 24px; }
+      .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+      .grade-col { border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; }
+      .grade-header { font-size: 13px; font-weight: bold; color: #ba0c2f; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #ba0c2f; }
+      .course { font-size: 12px; padding: 4px 0; border-bottom: 1px solid #f0f0f0; }
+      .course-code { color: #888; font-size: 10px; }
+      .credits { font-size: 10px; color: #888; margin-top: 8px; }
+      .req-section { margin-bottom: 24px; }
+      .req-title { font-size: 14px; font-weight: bold; margin-bottom: 8px; }
+      .req-row { display: flex; justify-content: space-between; font-size: 12px; padding: 4px 0; border-bottom: 1px solid #f0f0f0; }
+      .req-met { color: #10b981; font-weight: bold; }
+      .req-unmet { color: #ba0c2f; }
+      .footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 10px; color: #888; text-align: center; }
+      .ap-badge { background: #dbeafe; color: #1d4ed8; padding: 1px 6px; border-radius: 4px; font-size: 9px; font-weight: 600; margin-left: 4px; }
+      .college-badge { background: #fef3c7; color: #92400e; padding: 1px 6px; border-radius: 4px; font-size: 9px; font-weight: 600; margin-left: 4px; }
+      @media print { body { margin: 20px; } }
+    </style></head><body>
+    <h1>My 4-Year Academic Plan</h1>
+    <div class="subtitle">District 214 Academic Programs & Pathways &bull; Discover your future.</div>
+    <div class="grid">
+    ${[9,10,11,12].map(g => `<div class="grade-col">
+      <div class="grade-header">Grade ${g}</div>
+      ${plan[g].length > 0 ? plan[g].map(c => `<div class="course">${c.name}${c.name.startsWith('AP ') ? '<span class="ap-badge">AP</span>' : ''}${c.name.startsWith('College ') ? '<span class="college-badge">DC</span>' : ''} <span class="course-code">${c.code}</span></div>`).join('') : '<div class="course" style="color:#aaa;font-style:italic">No courses added</div>'}
+      <div class="credits">${totalCredits(g).toFixed(1)} credits</div>
+    </div>`).join('')}
+    </div>
+    <div class="req-section">
+      <div class="req-title">Graduation Requirement Progress</div>
+      ${reqProgress.map(r => `<div class="req-row"><span>${r.name}</span><span class="${r.have >= r.need ? 'req-met' : 'req-unmet'}">${r.have.toFixed(1)} / ${r.need} credits ${r.have >= r.need ? '✓' : ''}</span></div>`).join('')}
+      <div class="req-row" style="font-weight:bold;border-top:2px solid #e5e7eb;margin-top:4px;padding-top:4px"><span>Total Credits</span><span>${allCredits.toFixed(1)}</span></div>
+    </div>
+    <div class="footer">
+      <strong>District 214 High School District</strong> &bull; www.d214.org<br/>
+      This plan is for planning purposes only. Please meet with your school counselor to finalize your course selections.<br/>
+      Printed ${new Date().toLocaleDateString()}
+    </div>
+    </body></html>`;
+    w.document.write(html);
+    w.document.close();
+    w.onload = () => { w.print(); };
+  };
+
+  return (
+    <div>
+      <div className="flex items-center justify-between mb-2">
+        <h2 className="text-3xl font-bold text-gray-900 tracking-editorial">My 4-Year Plan</h2>
+        {allCredits > 0 && (
+          <button onClick={printPlan} className="flex items-center gap-2 px-4 py-2 bg-white rounded-xl shadow-soft text-sm font-medium text-gray-700 hover:text-d214red hover:shadow-elevated transition-all" aria-label="Print or save your 4-year plan as PDF">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+            Print / Save PDF
+          </button>
+        )}
+      </div>
+      <p className="text-gray-500 mb-6">Build your personalized course schedule. Start from a pathway template or add courses individually.</p>
+
+      <div className="bg-white rounded-2xl shadow-soft p-6 mb-8">
+        <h3 className="font-semibold text-gray-900 mb-4 text-sm uppercase tracking-wider">Start from a Pathway Template</h3>
+        <div className="flex flex-wrap gap-4 items-end">
+          <div>
+            <label className="text-xs text-gray-400 block mb-1.5 font-medium">Career Cluster</label>
+            <select value={templateCluster} onChange={e => { setTemplateCluster(e.target.value); setTemplatePathway(''); }} className="border border-gray-200 rounded-xl px-4 py-2.5 text-sm bg-gray-50">
+              <option value="">Select cluster...</option>
+              {DATA.clusters.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
+            </select>
+          </div>
+          {templateCluster && selectedClusterObj && (
+            <div>
+              <label className="text-xs text-gray-400 block mb-1.5 font-medium">Pathway</label>
+              <select value={templatePathway} onChange={e => setTemplatePathway(e.target.value)} className="border border-gray-200 rounded-xl px-4 py-2.5 text-sm bg-gray-50">
+                <option value="">Select pathway...</option>
+                {selectedClusterObj.pathways.map(p => <option key={p.id} value={p.id}>{p.name}</option>)}
+              </select>
+            </div>
+          )}
+          {templatePathway && (
+            <button onClick={loadTemplate} className="bg-d214red text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-red-700 transition-colors shadow-soft">
+              Load Template
+            </button>
+          )}
+          {allCredits > 0 && (
+            <button onClick={() => setPlan({ 9:[], 10:[], 11:[], 12:[] })} className="text-sm text-gray-400 hover:text-d214red transition-colors ml-2">Clear All</button>
+          )}
+        </div>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow-soft p-6 mb-8">
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="font-semibold text-gray-900 text-sm uppercase tracking-wider">Graduation Requirement Progress</h3>
+          <span className="text-sm text-gray-400 font-medium">{allCredits.toFixed(1)} total credits</span>
+        </div>
+        <div className="grid sm:grid-cols-3 gap-4">
+          {reqProgress.map(r => (
+            <div key={r.name} className="flex items-center gap-3">
+              <div className="flex-1">
+                <div className="flex justify-between text-xs mb-1.5">
+                  <span className="font-medium text-gray-700">{r.name}</span>
+                  <span className={r.have >= r.need ? 'text-green-600 font-medium' : 'text-gray-400'}>{r.have.toFixed(1)}/{r.need}</span>
+                </div>
+                <div className="bg-gray-100 rounded-full h-2.5">
+                  <div className={`h-2.5 rounded-full transition-all duration-500 ${r.have >= r.need ? 'bg-green-500' : 'bg-d214red'}`}
+                    style={{ width: `${Math.min(100, (r.have / r.need) * 100)}%` }} />
+                </div>
+              </div>
+              {r.have >= r.need && <span className="text-green-500 text-lg">{"\u2713"}</span>}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[9,10,11,12].map(gradeNum => (
+          <div key={gradeNum} className="bg-white rounded-2xl shadow-soft overflow-hidden">
+            <div className="flex justify-between items-center px-5 py-4 border-b border-gray-100">
+              <h3 className="font-bold text-gray-900">Grade {gradeNum}</h3>
+              <span className="text-xs text-gray-400 bg-gray-50 px-2.5 py-1 rounded-full font-medium">{totalCredits(gradeNum).toFixed(1)} cr</span>
+            </div>
+            <div className="p-4 min-h-[200px]">
+              {plan[gradeNum].map(c => (
+                <div key={c.code + c.name} className="flex items-center justify-between bg-gray-50 rounded-xl px-3.5 py-2.5 mb-2 group hover:bg-red50 transition-colors">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-1.5 flex-wrap">
+                      <span className="text-sm font-medium text-gray-800 truncate">{c.name}</span>
+                      {c.name.startsWith('AP ') && <span className="text-[10px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded-full font-semibold leading-none">AP</span>}
+                      {c.name.startsWith('College ') && <span className="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full font-semibold leading-none">DC</span>}
+                      {c.name.includes('Honors') && <span className="text-[10px] bg-purple-100 text-purple-700 px-1.5 py-0.5 rounded-full font-semibold leading-none">H</span>}
+                    </div>
+                    <div className="text-xs text-gray-400">{c.code} &bull; {c.creditSemester} cr</div>
+                  </div>
+                  <button onClick={() => removeCourse(gradeNum, c.code)} className="text-gray-300 hover:text-d214red ml-2 flex-shrink-0 transition-colors">&times;</button>
+                </div>
+              ))}
+              {addingGrade === gradeNum ? (
+                <div className="relative">
+                  <input type="text" placeholder="Search courses..." value={courseSearch} onChange={e => setCourseSearch(e.target.value)} autoFocus
+                    className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm bg-gray-50 focus:bg-white transition-colors" />
+                  <button onClick={() => { setAddingGrade(null); setCourseSearch(''); }} className="absolute right-3 top-2.5 text-gray-400 hover:text-gray-600 transition-colors">&times;</button>
+                  {searchResults.length > 0 && (
+                    <div className="absolute z-10 w-full bg-white rounded-xl mt-1.5 shadow-elevated max-h-60 overflow-y-auto">
+                      {searchResults.map(c => (
+                        <div key={c.code} onClick={() => addCourse(gradeNum, c)} className="px-4 py-2.5 text-sm hover:bg-red50 cursor-pointer border-b border-gray-50 last:border-0">
+                          <div className="flex items-center gap-1.5 font-medium text-gray-800">
+                            {c.name}
+                            {c.name.startsWith('AP ') && <span className="text-[9px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded-full font-semibold">AP</span>}
+                            {c.name.startsWith('College ') && <span className="text-[9px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full font-semibold">DC</span>}
+                          </div>
+                          <div className="text-xs text-gray-400">{c.code} &bull; {c.department}</div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <button onClick={() => setAddingGrade(gradeNum)} className="w-full border-2 border-dashed border-gray-200 rounded-xl py-2.5 text-sm text-gray-400 hover:border-d214red hover:text-d214red transition-colors">
+                  + Add Course
+                </button>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ===================== RESOURCES =====================
+function ResourcesTab() {
+  const [subTab, setSubTab] = useState('grad');
+
+  const subTabs = [
+    {id:'grad', label:'Graduation Requirements'},
+    {id:'uni', label:'University Admission'},
+    {id:'apdc', label:'AP & Dual Credit'},
+    {id:'careers', label:'Career Exploration'},
+    {id:'schools', label:'Schools'},
+    {id:'counselors', label:'College Counselors'}
+  ];
+
+  const apCourses = useMemo(() => DATA.courses.filter(c => c.name.startsWith('AP ')).sort((a,b) => a.name.localeCompare(b.name)), []);
+  const dcCourses = useMemo(() => DATA.courses.filter(c => c.name.startsWith('College ')).sort((a,b) => a.name.localeCompare(b.name)), []);
+  const honorsCourses = useMemo(() => DATA.courses.filter(c => c.name.includes('Honors')).sort((a,b) => a.name.localeCompare(b.name)), []);
+
+  return (
+    <div>
+      <h2 className="text-3xl font-bold text-gray-900 mb-6 tracking-editorial">Resources</h2>
+      <div className="flex gap-2 mb-8 flex-wrap">
+        {subTabs.map(t => (
+          <button key={t.id} onClick={() => setSubTab(t.id)} className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 ${
+            subTab === t.id ? 'bg-d214red text-white shadow-soft' : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
+          }`}>{t.label}</button>
+        ))}
+      </div>
+
+      {subTab === 'grad' && (
+        <div className="bg-white rounded-2xl shadow-soft p-8 fade-in">
+          <h3 className="text-xl font-bold text-gray-900 mb-2 tracking-editorial">D214 Graduation Requirements</h3>
+          <p className="text-sm text-gray-500 mb-6">Minimum 12 total credit units required for graduation (1 unit = year-long course).</p>
+          <div className="space-y-3">
+            {Object.entries(DATA.gradReqs).map(([key, req]) => (
+              <div key={key} className="flex items-start gap-5 p-5 bg-gray-50 rounded-xl">
+                <div className="bg-d214red text-white text-sm font-bold rounded-xl w-14 h-14 flex items-center justify-center flex-shrink-0 shadow-soft">
+                  {typeof req.credits === 'number' && req.credits > 0 ? (req.credits < 1 ? req.credits.toFixed(2) : req.credits.toFixed(1)) : "\u2713"}
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">{req.name}</h4>
+                  <p className="text-sm text-gray-500 mt-1 leading-relaxed">{req.notes}</p>
+                  {typeof req.credits === 'number' && req.credits > 0 && <p className="text-xs text-gray-400 mt-1.5">{req.credits} credit unit{req.credits !== 1 ? 's' : ''}</p>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {subTab === 'uni' && (
+        <div className="bg-white rounded-2xl shadow-soft p-8 fade-in">
+          <h3 className="text-xl font-bold text-gray-900 mb-2 tracking-editorial">Four-Year University Admission Requirements</h3>
+          <p className="text-sm text-gray-500 mb-6">Recommended preparation for competitive 4-year college admission. See your counselor for highly selective institution requirements.</p>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {Object.entries(DATA.uniReqs).map(([key, val]) => (
+              <div key={key} className="flex items-center gap-4 p-5 bg-gray-50 rounded-xl">
+                <div className="bg-gray-900 text-white text-xs font-bold rounded-xl w-14 h-14 flex items-center justify-center flex-shrink-0">
+                  {val}
+                </div>
+                <span className="font-medium text-gray-900">{key.replace(/([A-Z])/g, ' $1').replace(/^./, s => s.toUpperCase())}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {subTab === 'apdc' && (
+        <div className="fade-in space-y-8">
+          <div className="bg-white rounded-2xl shadow-soft p-8">
+            <h3 className="text-xl font-bold text-gray-900 mb-2 tracking-editorial">Get Ahead with AP & Dual Credit</h3>
+            <p className="text-sm text-gray-500 mb-6 leading-relaxed">District 214 offers extensive opportunities to earn college credit while still in high school. Taking AP and dual credit courses demonstrates academic rigor to colleges and can save thousands in tuition costs.</p>
+            <div className="grid sm:grid-cols-3 gap-5">
+              <div className="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-500">
+                <div className="text-3xl font-bold text-blue-700 mb-1">{apCourses.length}</div>
+                <div className="text-sm font-semibold text-blue-800 mb-2">AP Courses</div>
+                <p className="text-xs text-blue-600 leading-relaxed">College-level courses with standardized exams. A score of 3+ can earn college credit at most universities.</p>
+              </div>
+              <div className="bg-amber-50 rounded-xl p-6 border-l-4 border-amber-500">
+                <div className="text-3xl font-bold text-amber-700 mb-1">{dcCourses.length}</div>
+                <div className="text-sm font-semibold text-amber-800 mb-2">Dual Credit Courses</div>
+                <p className="text-xs text-amber-600 leading-relaxed">Earn both high school and college credit simultaneously through partnerships with local colleges.</p>
+              </div>
+              <div className="bg-purple-50 rounded-xl p-6 border-l-4 border-purple-500">
+                <div className="text-3xl font-bold text-purple-700 mb-1">{honorsCourses.length}</div>
+                <div className="text-sm font-semibold text-purple-800 mb-2">Honors Courses</div>
+                <p className="text-xs text-purple-600 leading-relaxed">Accelerated coursework with weighted GPA. Excellent preparation for AP-level rigor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-soft p-8">
+            <div className="flex items-center gap-3 mb-1">
+              <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold">AP</span>
+              <h3 className="text-lg font-bold text-gray-900 tracking-editorial">Advanced Placement Courses</h3>
+            </div>
+            <p className="text-sm text-gray-500 mb-5">College Board AP courses with nationally standardized exams each May. Scoring 3, 4, or 5 may earn college credit.</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+              {apCourses.map(c => (
+                <div key={c.code} className="flex items-center justify-between bg-gray-50 rounded-lg px-4 py-2.5">
+                  <div>
+                    <div className="text-sm font-medium text-gray-800">{c.name.replace('AP ', '')}</div>
+                    <div className="text-xs text-gray-400">Grade {c.gradeLevel} &bull; {c.department}</div>
+                  </div>
+                  <span className="text-xs font-mono text-gray-400 bg-gray-100 px-2 py-0.5 rounded">{c.code}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-soft p-8">
+            <div className="flex items-center gap-3 mb-1">
+              <span className="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-xs font-bold">DC</span>
+              <h3 className="text-lg font-bold text-gray-900 tracking-editorial">Dual Credit Courses</h3>
+            </div>
+            <p className="text-sm text-gray-500 mb-5">Courses offered in partnership with area colleges. Earn college credit upon successful completion, no separate exam required.</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+              {dcCourses.map(c => (
+                <div key={c.code} className="flex items-center justify-between bg-gray-50 rounded-lg px-4 py-2.5">
+                  <div>
+                    <div className="text-sm font-medium text-gray-800">{c.name.replace('College ', '')}</div>
+                    <div className="text-xs text-gray-400">Grade {c.gradeLevel} &bull; {c.department}</div>
+                  </div>
+                  <span className="text-xs font-mono text-gray-400 bg-gray-100 px-2 py-0.5 rounded">{c.code}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-soft p-8">
+            <div className="flex items-center gap-3 mb-1">
+              <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-bold">H</span>
+              <h3 className="text-lg font-bold text-gray-900 tracking-editorial">Honors Courses</h3>
+            </div>
+            <p className="text-sm text-gray-500 mb-5">Rigorous courses with weighted GPA that prepare students for AP-level work. Demonstrates academic ambition to colleges.</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+              {honorsCourses.map(c => (
+                <div key={c.code} className="flex items-center justify-between bg-gray-50 rounded-lg px-4 py-2.5">
+                  <div>
+                    <div className="text-sm font-medium text-gray-800">{c.name}</div>
+                    <div className="text-xs text-gray-400">Grade {c.gradeLevel} &bull; {c.department}</div>
+                  </div>
+                  <span className="text-xs font-mono text-gray-400 bg-gray-100 px-2 py-0.5 rounded">{c.code}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-red50 rounded-2xl p-6 border border-red100">
+            <h4 className="font-semibold text-gray-900 mb-2">Talk to Your Counselor</h4>
+            <p className="text-sm text-gray-600 leading-relaxed">Your school counselor can help you choose the right AP and dual credit courses based on your academic goals, college plans, and current course load. Schedule a meeting to create a plan that works for you.</p>
+          </div>
+        </div>
+      )}
+
+      {subTab === 'careers' && (
+        <div className="fade-in">
+          <div className="bg-white rounded-2xl shadow-soft p-8 mb-8">
+            <h3 className="text-xl font-bold text-gray-900 mb-2 tracking-editorial">Career Exploration Tools</h3>
+            <p className="text-sm text-gray-500 mb-6 leading-relaxed">Explore careers, salaries, and job outlook data from trusted U.S. government sources. Use these tools to research careers that interest you, then meet with your school counselor for personalized guidance.</p>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <a href="https://www.bls.gov/ooh/" target="_blank" rel="noopener noreferrer" className="block bg-gray-50 rounded-xl p-6 card-hover border-l-4 border-d214red">
+                <h4 className="font-bold text-gray-900 mb-2">Occupational Outlook Handbook</h4>
+                <p className="text-sm text-gray-600 mb-3 leading-relaxed">The BLS Occupational Outlook Handbook provides detailed profiles for 600+ careers including median salary, education requirements, job duties, and 10-year employment projections.</p>
+                <div className="flex items-center gap-4 text-xs text-gray-500 mb-3">
+                  <span className="bg-gray-100 px-2.5 py-1 rounded-full">600+ careers</span>
+                  <span className="bg-gray-100 px-2.5 py-1 rounded-full">Salary data</span>
+                  <span className="bg-gray-100 px-2.5 py-1 rounded-full">Job outlook</span>
+                </div>
+                <span className="text-sm font-medium text-d214red">Visit BLS.gov {"\u2192"}</span>
+              </a>
+              <a href="https://www.onetonline.org/" target="_blank" rel="noopener noreferrer" className="block bg-gray-50 rounded-xl p-6 card-hover border-l-4 border-d214red">
+                <h4 className="font-bold text-gray-900 mb-2">O*NET OnLine</h4>
+                <p className="text-sm text-gray-600 mb-3 leading-relaxed">Explore 900+ occupations with detailed information about skills, abilities, interests, and work activities. Take the Interest Profiler quiz to discover careers that match your personality.</p>
+                <div className="flex items-center gap-4 text-xs text-gray-500 mb-3">
+                  <span className="bg-gray-100 px-2.5 py-1 rounded-full">900+ careers</span>
+                  <span className="bg-gray-100 px-2.5 py-1 rounded-full">Skills match</span>
+                  <span className="bg-gray-100 px-2.5 py-1 rounded-full">Interest quiz</span>
+                </div>
+                <span className="text-sm font-medium text-d214red">Visit O*NET {"\u2192"}</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-soft p-8">
+            <h3 className="text-xl font-bold text-gray-900 mb-2 tracking-editorial">Quick Career Quiz</h3>
+            <p className="text-sm text-gray-500 mb-6">Not sure what career fits you? Take the O*NET Interest Profiler to discover careers that match your interests and strengths.</p>
+            <div className="grid sm:grid-cols-3 gap-4">
+              <a href="https://www.mynextmove.org/explore/ip" target="_blank" rel="noopener noreferrer" className="block bg-red50 rounded-xl p-5 text-center card-hover">
+                <div className="text-2xl mb-2">{"🎯"}</div>
+                <h4 className="font-semibold text-gray-900 text-sm mb-1">Interest Profiler</h4>
+                <p className="text-xs text-gray-500">60 questions to match your interests to careers</p>
+              </a>
+              <a href="https://www.bls.gov/ooh/occupation-finder.htm" target="_blank" rel="noopener noreferrer" className="block bg-red50 rounded-xl p-5 text-center card-hover">
+                <div className="text-2xl mb-2">{"🔍"}</div>
+                <h4 className="font-semibold text-gray-900 text-sm mb-1">Occupation Finder</h4>
+                <p className="text-xs text-gray-500">Filter careers by pay, education, growth, and more</p>
+              </a>
+              <a href="https://www.mynextmove.org/" target="_blank" rel="noopener noreferrer" className="block bg-red50 rounded-xl p-5 text-center card-hover">
+                <div className="text-2xl mb-2">{"🚀"}</div>
+                <h4 className="font-semibold text-gray-900 text-sm mb-1">My Next Move</h4>
+                <p className="text-xs text-gray-500">Search careers by keyword, industry, or interest</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {subTab === 'schools' && (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 fade-in">
+          {DATA.schools.map(s => (
+            <div key={s.name} className="bg-white rounded-2xl shadow-soft p-6 card-hover">
+              <h4 className="font-bold text-gray-900 mb-3">{s.name}</h4>
+              <p className="text-sm text-gray-500">{s.address}</p>
+              <p className="text-sm text-gray-500 mt-1">{s.phone}</p>
+              <a href={`https://${s.website}`} target="_blank" rel="noopener noreferrer" className="text-sm text-d214red hover:underline mt-2 block font-medium">{s.website}</a>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {subTab === 'counselors' && (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 fade-in">
+          {DATA.counselors.map(c => (
+            <div key={c.name} className="bg-white rounded-2xl shadow-soft p-6 card-hover">
+              <h4 className="font-bold text-gray-900 mb-1">{c.name}</h4>
+              <p className="text-sm text-gray-400 mb-3">{c.school}</p>
+              <p className="text-sm text-gray-500">{c.phone}</p>
+              <a href={`mailto:${c.email}`} className="text-sm text-d214red hover:underline block font-medium">{c.email}</a>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ===================== RENDER =====================
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+</script>
 </body>
 </html>
