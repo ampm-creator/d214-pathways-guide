@@ -84,30 +84,7 @@ button:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 2px s
 <div id="root"><div style="display:flex;align-items:center;justify-content:center;height:100vh;font-size:1.2rem;color:#666" role="status" aria-label="Loading">Loading District 214 Course Planner...</div></div>
 
 <script src="data.js"></script>
-
-<script>
-  // Load CMS-managed data
-  var CAREER_DATA = {};
-  var SITE_SETTINGS = {};
-  
-  Promise.all([
-    fetch('data/career-data.json').then(r => r.json()),
-    fetch('data/site-settings.json').then(r => r.json())
-  ]).then(([careerJson, settingsJson]) => {
-    // Convert career array to object keyed by title
-    careerJson.careers.forEach(c => {
-      CAREER_DATA[c.title] = {
-        salary: c.salary,
-        growth: c.growth,
-        outlook: c.outlook,
-        blsUrl: c.blsUrl,
-        onetCode: c.onetCode
-      };
-    });
-    SITE_SETTINGS = settingsJson;
-    document.title = settingsJson.siteTitle + ' ' + settingsJson.schoolYear;
-  }).catch(err => console.warn('CMS data load error:', err));
-</script>
+<script src="career-data.js"></script>
 
 <script type="text/babel">
 const { useState, useMemo, useRef, useEffect } = React;
