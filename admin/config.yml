@@ -1,0 +1,48 @@
+backend:
+  name: github
+  repo: ampm-creator/d214-pathways-guide
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "General Settings"
+        name: "general"
+        file: "data/site-settings.json"
+        fields:
+          - { label: "School Year", name: "schoolYear", widget: "string" }
+          - { label: "Site Title", name: "siteTitle", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+
+  - name: "careers"
+    label: "Career Salary Data"
+    files:
+      - label: "Career Data"
+        name: "career-data"
+        file: "data/career-data.json"
+        fields:
+          - label: "Careers"
+            name: "careers"
+            widget: "list"
+            fields:
+              - { label: "Career Title", name: "title", widget: "string" }
+              - { label: "Median Salary ($)", name: "salary", widget: "number" }
+              - { label: "Growth Rate", name: "growth", widget: "string", hint: "e.g., +5%" }
+              - { label: "Outlook", name: "outlook", widget: "select", options: ["Much faster than average", "Faster than average", "As fast as average", "Slower than average", "Decline"] }
+              - { label: "BLS URL", name: "blsUrl", widget: "string" }
+              - { label: "O*NET Code", name: "onetCode", widget: "string" }
+
+  - name: "announcements"
+    label: "Announcements"
+    folder: "content/announcements"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
